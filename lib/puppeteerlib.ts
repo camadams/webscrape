@@ -11,6 +11,7 @@ export const withBrowser = async (fn: any) => {
     executablePath,
     args: edgeChromium.args,
     headless: true,
+    ignoreDefaultArgs: ["--disable-extensions"],
   });
   try {
     return await fn(browser);
